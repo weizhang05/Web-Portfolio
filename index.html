@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="me">
+  <head>
+    <%@ page contentType="text/html; charset=UTF-8" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Web Resume">
+    <meta name="author" content="Clyde Chan">
+    <link rel="shortcut icon" href="img/icon.png" />
+
+    <title>Clyde W. Zhang</title>
+	
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+	
+	<!--Google fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Lobster|Press+Start+2P|Montserrat|Roboto+Condensed|Amatic+SC' rel='stylesheet' type='text/css'>
+	
+	<!--Mapbox-->
+	<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+	<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+	<script src="lib/leaflet/leaflet.js"></script>
+	<script src="lib/leaflet/leaflet-src.js"></script>
+	<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+	
+	<!--Custom-->
+	<link rel="stylesheet" href="custom/style.css">
+	
+	<!--Loading-->
+	<script src="lib/loading/prefixfree.min.js"></script>
+  </head>
+
+  <body>
+	<div id="loading">
+		<style>
+		.loading {
+		  box-sizing: border-box;
+		  position: relative;
+		  display: inline-block;
+		  padding: 0.5em;
+		  vertical-align: middle;
+		  text-align: center;
+		  background-color: transparent;
+		  border: 5px solid transparent;
+		  border-top-color: #c22;
+		  border-bottom-color: #c22;
+		  border-radius: 50%;
+		}
+
+		.outer {
+		  animation: spin 1s infinite;
+		}
+
+		.inner {
+		  animation: spin 1s infinite;
+		}
+
+		@keyframes spin {
+		  0% {
+			transform: rotateZ(0deg);
+		  }
+		  100% {
+			transform: rotateZ(360deg);
+		  }
+		}
+		/* styling */
+		html {
+		  width: 100%;
+		  height: 100%;
+		  background: radial-gradient(circle, #ffffff 0%, #aaaaaa 100%) no-repeat;
+		  overflow-x: hidden;
+		  overflow-y: hidden;
+		}
+
+		body {
+		  text-align: center;
+		  display: table;
+		  width: 100%;
+		  height: 100%;
+		  overflow-x: hidden;
+		  overflow-y: hidden;
+		}
+
+		#wrap {
+		  box-sizing: border-box;
+		  display: table-cell;
+		  vertical-align: middle;
+		}
+		</style>
+		
+		<div class="loading outer">
+			<div class="loading inner"></div>
+		</div>
+		
+		<h1>mai kan choing, rilek rilek a bit</h1>
+	</div>
+  
+    <div class="container" id="main">
+		<div class="row">
+			<img class="img-responsive img-rounded center-block" src="img/banner.png">
+		</div>
+		
+		<div class="row" id="bio">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+				{{officialName}}<br>
+				{{traditional}}<br>
+				{{simplified}}<br>				
+				{{dob}}<br>		
+			</div>
+			
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<img class="img-responsive img-thumbnail center-block" src="img/pp.jpg" id="profilePicture">
+			</div>
+		</div>
+		
+		<div class="row" id="edu">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1 class="text-center">JUST MY NERD MOMENTS <span class="glyphicon glyphicon-education"></span></h1>
+				<div class="visible-xs-block text-center" id="mobile">
+					<div class="col-xs-12">
+						<img class="img-responsive img-thumbnail center-block schoolLogo" src="img/ite.png">
+						NITEC in Info-Communications Technology
+						<ul>
+							<li>CCC-CDC ITE Scholarship 2010</li>
+							<li>CCC-CDC ITE Scholarship 2011</li>
+						</ul>
+					</div>
+					
+					<div class="col-xs-12">
+						<img class="img-responsive img-thumbnail center-block schoolLogo" src="img/rp.jpg">
+						Diploma in Information Technology with Merit (Security)
+						<ul>
+							<li>Netapp-PTC Scholarship</li>
+							<li>Alcatel-Lucent Scholarship</li>
+							<li>Lee Kuan Yew Award for Mathematics and Science</li>
+						</ul>
+					</div>
+					
+					<div class="col-xs-12">
+						<img class="img-responsive img-thumbnail center-block schoolLogo" src="img/nus.png">
+						Bachelor of Computing in Information Security
+					</div>
+				</div>
+				
+				<div class="hidden-xs center-block" id='map'></div>
+			</div>
+		</div>
+		
+		<div class="row text-center" id="others">
+			<h1>AND MY BRAGGING RIGHTS <span class="glyphicon glyphicon-star"></span></h1>					
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<ul>
+					<li>Vice President of IT Security IG 2014</li>
+					<li>President of Operation Smile 2014</li>
+					<li>REPUBLIC Award 2015</li>
+					<li>Support Developer of Red Hat Challenge @ IDA Labs 2014</li>
+					<li>Temasek Foundation SCALE Scholar 2014</li>
+					<li>MAD Service-Learner Leadership Excellence (GOLD) 2014</li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<img class="center-block img-responsive" src="img/digitalme.png">
+			</div>
+		</div>
+		
+		<div class="row text-center" id="exp">
+			<h1 class="text-center">QUESTS I COMPLETED <span class="glyphicon glyphicon-wrench"></span></h1>
+			
+			<p>
+				<img class="center-block img-responsive" src="img/w1.png">
+				Part of a project the tracks movement of goods using both RFID and BLE technology.<br>
+				Involvement includes setting up CI, creating test environments, developing and fixing of codes.
+				
+				<br><br>
+				
+				<img class="center-block img-responsive" src="img/w2.png">
+				A requirement for 2 years of service, started as a recruit and groomed all the way becoming a specialist.<br>
+				Works as both a commander and an instructor for the new generation of soldiers.
+			</p>
+		</div>
+		
+		<div class="row text-center" id="footer">
+			<a href="https://www.facebook.com/weizhang05" target="_blank"><img src="img/facebook.png"></a>
+			<a href="https://instagram.com/weizhang05/" target="_blank"><img src="img/instagram.png"></a>
+			<a href="https://linkedin.com/in/weizhang05" target="_blank"><img src="img/linkedin.png"></a><br>
+			<strong>
+				Chan Wei Zhang &copy;<br>
+				chanweizhang05@hotmail.com
+			</strong>
+		</div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="lib/angularjs/angular.js"></script>
+	<script src="lib/jquery/jquery-1.11.2.js"></script>
+	<script src="custom/angular.js"></script>
+	<script src="custom/loading.js"></script>
+	<script src="custom/map.js"></script>
+  </body>
+</html>
