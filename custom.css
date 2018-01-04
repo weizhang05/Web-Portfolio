@@ -1,0 +1,261 @@
+/* Extra small devices (portrait phones, less than 576px)*/
+/* No media query since this is the default in Bootstrap*/
+#main
+{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+/*Header*/
+#header
+{
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color: white;
+}
+#header a
+{
+	text-decoration: none;
+	color: white;
+}
+#name
+{
+	font-size: 30px;
+	letter-spacing: 3px;
+}
+#appointment
+{
+	font-size: 15px;
+	margin-left: 30px;
+	letter-spacing: 0px;
+}
+
+/*Banner*/
+#banner
+{
+	background: url(img/pexels-photo-358674.jpeg) no-repeat center;
+	min-height: 750px;
+	color: #ffffff;
+}
+#title
+{
+	position: relative;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	background-color: rgba(0,0,0,0.7);
+	font-family: 'Playfair Display', serif;
+	font-size: 50px;
+	letter-spacing: 20px;
+}
+
+/*Intro*/
+#intro
+{
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	font-family: 'Playfair Display', serif;
+	border-bottom: 1px solid #000000;
+}
+#introLeft
+{
+	text-align: center;
+	padding-bottom: 50px;
+}
+#profilePic
+{
+	height: 300px;
+	width: 300px;
+}
+#introRight
+{
+	text-align: left;
+	font-size: 20px;
+}
+#introRight p
+{
+	margin-bottom: 50px;
+}
+
+/*Alumnus*/
+#alumnus
+{
+	padding-top: 100px;
+	text-align: center;
+	margin-left: 30px;
+	margin-right: 30px;
+	font-size: 20px;
+	font-family: 'Playfair Display', serif;
+}
+#alumnus div
+{
+	margin-bottom: 50px;
+}
+#alumnus p
+{
+	margin-top: 30px;
+}
+#alumnus h1
+{
+	letter-spacing: -3px;
+	word-spacing: 20px;
+	color: #dd0000;
+	border-bottom: 1px solid;
+}
+
+/*Work*/
+#work
+{
+	padding-top: 100px;
+	margin-left: 30px;
+	margin-right: 30px;
+	background-color: #faf8f6;
+	min-height: 500px;
+	color: #5e5c5b;
+}
+#work h1
+{
+	letter-spacing: -3px;
+	word-spacing: 20px;
+	border-bottom: 1px solid;
+	display: inline;
+	margin-right: 50px;
+}
+#work span
+{
+	display: block;
+	margin-bottom: 20px;
+}
+#work p
+{
+	margin-top: 30px;
+	font-size: 25px;
+}
+
+/*Project*/
+#project
+{
+	padding-top: 100px;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-bottom: 100px;
+	font-family: 'Playfair Display', serif;
+}
+#projectRight
+{
+	text-align: center;
+}
+#projectLeft
+{
+	font-size: 20px;
+}
+#project img
+{
+	width: 300px;
+	height: 300px;
+}
+
+/*Footer*/
+#footer
+{
+	padding-left: 30px;
+	background-color: black;
+	color: white;
+}
+#leftFooter
+{
+	text-align: center;
+	margin-top: 10px;
+}
+#rightFooter
+{
+	text-align: center;
+	margin-top: 10px;
+}
+#rightFooter img
+{
+	margin-right: 25px;
+	width: 30px;
+	height: 30px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) 
+{
+	
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) 
+{
+	
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) 
+{
+	/*Intro*/
+	#intro
+	{
+		padding-top: 200px;
+		padding-bottom: 0px;
+		min-height: 750px;
+	}
+	
+	/*Header*/
+	#introLeft
+	{
+		text-align: right;
+	}
+	#introRight
+	{
+		padding-top: 0px;
+		padding-left: 50px;
+	}
+	
+	/*Alumnus*/
+	#alumnus
+	{
+		text-align: left;
+		padding-top: 200px;
+		padding-bottom: 100px;
+	}
+	
+	/*Work*/
+	#work span
+	{
+		display: inline;
+	}
+	
+	/*Project*/
+	.projectShowcase
+	{
+		text-align: center;
+	}
+	
+	/*Footer*/
+	#leftFooter
+	{
+		text-align: right;
+	}
+	#rightFooter
+	{
+		margin-top: auto;
+		margin-bottom: auto;
+		padding-left: 100px;
+		text-align: left;
+	}
+	#rightFooter img
+	{
+		margin-right: 25px;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) 
+{
+	
+}
